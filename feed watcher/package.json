@@ -1,0 +1,23 @@
+{
+  "name": "vanti-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "redis": "^3.1.2",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.6.1",
+    "@types/redis": "^2.8.31"
+  }
+}
