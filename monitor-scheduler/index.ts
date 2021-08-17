@@ -6,17 +6,12 @@ enum StateType {
     NORMAL= 'normal',
     MISSING = 'missing'
 }
-
-const alertPeriod = Number.parseInt(process.env.ALERT_PERIOD_SECONDS || '');
-
-if(isNaN(alertPeriod)) {
-    throw new Error('missing essential env variables to start program');
-}
-
 console.log('Start monitoring feed state');
 
+const alertPeriod = Number.parseInt(process.env.ALERT_PERIOD_SECONDS || '60');
 const client = redis.createClient();
 const clientGet = util.promisify(client.get).bind(client);
+
 client.set('state', StateType.NORMAL);
 
 const getSecondsFromTimestamp = async () => {
