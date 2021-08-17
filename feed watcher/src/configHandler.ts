@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 
 export const getConfigJSON = (path: string) => {
     const config = fs.readFileSync(path);
